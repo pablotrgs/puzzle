@@ -1,0 +1,246 @@
+.buttonhome  { /*boton footer acerca.html*/
+    background-color: grey;
+    border: none;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 12px;
+}
+
+header{
+    background: linear-gradient(red,yellow);
+   margin-left: auto;
+   margin-right: auto;
+   text-align: center;
+    height: 215px;
+}
+
+#explicacion {
+    font-size: 20px;
+    color: black;
+}
+
+body{
+    border: 10px dotted black;
+    padding: 10px;
+    background-color: #ffffe6;
+}
+
+#botones {
+    display: inline-block;
+    width: 20%;
+}
+
+#zonajuego {
+    display: inline-block;
+    float: right;
+    width: 80%;
+}
+
+.boton {
+    background-color: grey;
+    border: none;
+    color: white;
+    padding: 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 8px 2px;
+    cursor: pointer;
+    border-radius: 12px;
+}
+
+#tituloweb{
+    color: white;
+    text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+}
+
+#accion{
+    position: relative;
+    float: left;
+    margin: 0 auto;
+}
+
+#contador {
+   background: yellow;
+   display: inline-block;
+   border: 4px red;
+    margin: 0 0 4px 4px;
+    text-align: center;
+    width: 50px;
+    font-size: 30px;
+    border: 2px dashed red;
+}
+
+.imagen {
+    float: left;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 47px;
+}
+
+.puzzle {
+    float: right;
+    margin-right: 120px;
+    margin-bottom: 10px;
+}
+
+footer {
+    height: 60px;
+    background: linear-gradient(yellow, red);
+    color: white;
+    text-align: center;
+    clear: both;
+}
+
+.bordeRojo{
+	outline: 5px solid red;
+	z-index: 9;
+}
+
+#piezas{
+    visibility: hidden;
+    display: none;
+}
+
+#ocupado{
+	position: absolute;
+	top:500px;
+	left:-1500px;
+	padding: 10px;
+	background-color: #FF3817;
+	border-radius: 10px;
+	border:solid 2px;
+	transition:.3s;
+	z-index: 2;
+
+}
+#ocupado button{
+	margin-left:55px;
+}
+
+#fin{
+  min-width: 266px;
+	position: absolute;
+	top:500px;
+	left:-1500px;
+	padding: 10px;
+	background-color: #3CD13C;
+	border-radius: 10px;
+	border:solid 2px;
+	transition:.3s;
+	z-index: 2;
+
+}
+#fin button{
+	margin-left:55px;
+}
+#comprobar{
+  width: 150px;
+	position: fixed;
+	top:500px;
+	left:-1500px;
+	padding: 10px;
+	background-color: #93E9FA;
+	border-radius: 10px;
+	border:solid 2px;
+	transition:.3s;
+	z-index: 2;
+}
+#comprobar button{
+	margin-left:55px;
+}
+
+#finjuego {
+    width: 150px;
+    position: fixed;
+    top:500px;
+    left:-1500px;
+    padding: 10px;
+    background-color: #93E9FA;
+    border-radius: 10px;
+    border:solid 2px;
+    transition:.3s;
+    z-index: 2;
+}
+
+#finjuego button{
+    margin-left:55px;
+}
+
+
+@media all and (max-width: 510px){
+
+    header{
+        width: 66%;
+        height: 66%;
+    }
+
+    body{
+        border: 2px dotted black;
+        padding: 0px;
+        background: #e0e0d1;
+        background-clip: content-box;
+    }
+
+    .boton {
+        width: 90%;
+        height: 80%;
+        font-size: 10px;
+    }
+
+    #explicacion {
+        display: none;
+    }
+
+    #contador {
+        width: 70%;
+        height: 70%;
+        display: inline-block;
+        float: left;
+    }
+
+    #movimientos {
+        float: left;
+    }
+
+    #botones {
+        width: 20%;
+    }
+
+    #input {
+        width: 50%;
+    }
+
+    .color{
+        display: none
+    }
+
+    #my-canvas {
+        width: 85%;
+    }
+
+    #my-canvas2 {
+        width: 85%;
+    }
+
+    .imagen {
+        float: center;
+        margin-left: 5px;
+    }
+
+    .puzzle {
+        float: center;
+        margin-left: 5px;
+        margin-right: 0px;
+        margin-bottom: 10px;
+    }
+
+
+}

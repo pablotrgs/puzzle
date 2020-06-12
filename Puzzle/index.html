@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <title>Puzzle</title>
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <script type="text/javascript" src="js/index.js"></script>
+</head>
+
+<body onload="iniciar();">
+    <header>
+        <img id="logo" style="width:100px; height:100px" src="img/puzzle.png" alt="logo">
+        <div>
+            <h1 id="tituloweb">Puzzle</h1>
+            <p id="explicacion">Se trata de montar la imagen de manera que quede ordenada</p>
+        </div>
+    </header>
+
+    <section id="accion">
+      <div id="botones">
+          <div id="movimientos"><p id="nmovs">Numero de movimientos: <span id ="movs">0</span></p></div>
+          <button id="comprueba" class="boton comprueba" type="button" onclick="comprobarAcertadas();" name="button" disabled>Comprobar</button>
+          <button id="ayuda" class="boton ayuda" type="button" onclick="ayuda();" disabled>Ayuda</button>
+
+          <div class="dificultad">
+            <button id="facil" class="boton facil" type="button" onclick="setDificultad(1);" name="button">Fácil</button>
+            <button id="medio" class=" boton medio" type="button" onclick="setDificultad(2);" name="button">Medio</button>
+            <button id="dificil" class="boton dificil" type="button" onclick="setDificultad(3);" name="button">Difícil</button>
+          </div>
+          <div class="color">
+            <input type="color" id="colorLineas" >
+            <button type="button" class="boton color" id="botonlineas" onclick="setColor()" name="button">color</button>
+          </div>
+            <button type="button" class="boton iniciar" onclick="iniciarJuego();" id="botoniniciar" name="button">Iniciar</button>
+            <button type="button" class="boton finalizar" onclick="finalizar();" id="botonfinalizar" name="button">Finalizar</button>
+            <div id="contador"></div>
+      </div>
+      <div id="zonajuego">
+        <input type="file" id="input" class="boton seleccionararchivo" accept="image/*">
+        <div class="imagen">
+            <h2>Imagen</h2>
+            <canvas id="my-canvas" width="360" height="240" draggable="true" style="border:1px solid black;">
+                Su navegador no soporta canvas :(
+            </canvas>
+
+        </div>
+
+        <div class="puzzle">
+            <h2>Puzzle</h2>
+            <canvas id="my-canvas2"   onClick="colocarClick(event)" ondragover="dragOver(event)" ondrop="colocarClick(event)" width="360" height="240" style="border:1px solid black;">
+                Su navegador no soporta canvas :(
+            </canvas>
+        </div>
+      </div>
+          <div id="centrar">
+              <section  id="piezas"><h2 id="piezasp"></h2></section>
+              <section id="ocupado">
+                <h2>Ya esta ocupado</h2>
+                <button onClick="ocupado();">seguir</button>
+              </section>
+
+              <section id="comprobar">
+                <h2><span id="mensaje"></span></h2>
+                <p>Aciertos: <span id="acertos"></span></p>
+                <p>Faltan: <span id="falos"></span></p>
+                <button onClick="comprobar();">seguir</button>
+              </section>
+
+              <section id="finjuego">
+                <p><span id="mensaje2"></span></p>
+                <button onClick="reiniciar();">Reiniciar</button>
+              </section>
+
+              <section id="fin">
+                <h2>Enhorabuena</h2>
+                <p>Has completado correctamente el puzzle!</p>
+                <button onClick="reiniciar();">Reiniciar</button>
+              </section>
+          </div>
+    </section>
+
+
+    <footer>
+        <p><a href="acerca.html">Contacto </a></p>
+        <time datetime="2018-05-8">&copy; 2018</time>
+    </footer>
+</body>
+
+</html>
